@@ -1,0 +1,11 @@
+.reveal h2.slide-title {
+  text-transform: none;
+}
+
+.slide-center {
+  flex-direction: column;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

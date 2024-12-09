@@ -1,40 +1,159 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>Comparison of Large Language Models (LLMs)</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css" />
+	<link rel="stylesheet" href="dist/reveal.css" />
+	<link rel="stylesheet" href="assets/style.css" />
+	<link rel="stylesheet" href="dist/theme/white.css" />
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" />
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2 class="slide-title">
+					Comparison of <strong>Large Language Models (LLMs)</strong>
+				</h2>
+			</section>
+			<section>
+				<h2 class="slide-title">About the presentation</h2>
+				<ul style="width: 90%">
+					<li>Key Metrics for Comparison</li>
+					<li>Benchmarks</li>
+					<li>How to choose?</li>
+					<li>Leaderboards</li>
+				</ul>
+			</section>
+			<section>
+				<h2 class="slide-title">Key Metrics for Comparison</h2>
+				<ul>
+					<li>
+						<b>Latency</b>: Time to first token received after the API
+						request.
+					</li>
+					<li>
+						<b>Cost</b>: Price per million tokens for both input and output.
+					</li>
+					<li>
+						<b>Performance</b>: Normalized average relative performance
+						across multiple metrics ( benchmarks ).
+					</li>
+					<li>
+						<b>Context Window</b>: Maximum number of combined input and
+						output tokens.
+					</li>
+				</ul>
+				<aside class="notes">
+					- context window: The context window, which refers to the maximum
+					number of combined input and output tokens, is a critical factor
+					for applications requiring extensive context handling.
+					- performance: In the context of LMMs, this is often a composite metric that aggregates the results from
+					multiple evaluation benchmarks.
+				</aside>
+			</section>
+			<section>
+				<section>
+					<h2 class="slide-title">Benchmarks</h2>
+					<ul>
+						<li>Chatbot Arena</li>
+						<li>IFEval (Instruction Following Evaluation)</li>
+						<li>MMLU / MMLU-Pro (Massive Multitask Language Understanding)</li>
+						<li>GPQA (Google-Proof Q&A Benchmark) </li>
+					</ul>
+					<a target="_blank" style="font-size: 1.5rem;"
+						href="https://huggingface.co/spaces/open-llm-leaderboard/blog">More here</a>
+					<aside class="notes">
+						- <b>Chatbot Arena</b>: evaluating coherence, factual accuracy, and conversational flow
+						- MMLU: A benchmark designed to measure a model's knowledge across a wide array of subjects, ranging from
+						science and mathematics to history and law.
+						- MT-Bench: Likely a benchmark focusing on multitask learning
+					</aside>
+
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2 class="slide-title">How to choose?</h2>
+				</section>
+				<section>
+					<p class="slide-title" style="font-size: 3rem;">
+						Focus on <b>accuracy</b> first then on <strong>cost</strong> and
+						<b>latency</b>
+					</p>
+					<aside class="notes">
+						In the POC phase we should focus on the accuracy, to see if we can
+						solve our problem with the best Model After that then we have a good
+						result by using the best model we can start thinking about traffic
+						in production the the cost
+					</aside>
+				</section>
+				<section>
+					<h2 class="slide-title">How to measure Accuracy?</h2>
+					<ul>
+						<li>Setting a clear accuracy target</li>
+						<li>Developing an evaluation dataset</li>
+					</ul>
+					<aside class="notes">
+						- Create a dataset that allows you to measure the model's performance against these goals.
+						-
+					</aside>
+
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2 class="slide-title">Leaderboards</h2>
+				</section>
+				<section>
+					<a target="_blank" href="https://artificialanalysis.ai/embed/llm-performance-leaderboard">
+						<h2 class="slide-title">LLM performance leaderboard</h2>
+					</a>
+					<iframe style="width: 100%; height: 60vh"
+						data-src="https://artificialanalysis.ai/embed/llm-performance-leaderboard"></iframe>
+				</section>
+
+			</section>
+			<section>
+				<h2 class="slide-title">References</h2>
+
+				<ul>
+					<li>
+						<a target="_blank"
+							href="https://medium.com/@genai.works/comprehensive-comparison-of-large-language-models-llms-0da7e894e419">
+							Comprehensive Comparison of Large Language Models (LLMs)
+						</a>
+					</li>
+			</section>
 		</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+		});
+	</script>
+</body>
+
 </html>
