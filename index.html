@@ -29,8 +29,8 @@
 				<ul style="width: 90%">
 					<li>Key Metrics for Comparison</li>
 					<li>Benchmarks</li>
-					<li>How to choose?</li>
 					<li>Leaderboards</li>
+					<li>How to choose?</li>
 				</ul>
 			</section>
 			<section>
@@ -45,7 +45,7 @@
 					</li>
 					<li>
 						<b>Performance</b>: Normalized average relative performance
-						across multiple metrics ( benchmarks ).
+						across multiple metrics (benchmarks).
 					</li>
 					<li>
 						<b>Context Window</b>: Maximum number of combined input and
@@ -80,7 +80,38 @@
 
 				</section>
 			</section>
+			<section>
+				<section>
+					<h2 class="slide-title">Leaderboards</h2>
+				</section>
+				<section>
+					<a target="_blank" href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard">
+						<h2 class="slide-title">Hugging Face V2 </h2>
+					</a>
+					<img style="width: 100%" src="./assets/Screenshot 2024-12-10 at 08.57.56.png"></iframe>
+				</section>
+				<section>
+					<a target="_blank" href="https://crfm.stanford.edu/helm/">
+						<h2 class="slide-title">Helm Stanford</h2>
+					</a>
+					<iframe style="width: 100%; height: 60vh" data-src="https://crfm.stanford.edu/helm/"></iframe>
+				</section>
+				<section>
+					<a target="_blank" href="https://lmarena.ai/">
+						<h2 class="slide-title">LMSYS:Chatbot Arena LLM</h2>
+					</a>
+					<iframe style="width: 100%; height: 60vh" data-src="https://lmarena.ai/"></iframe>
+				</section>
 
+				<section>
+					<a target="_blank" href="https://artificialanalysis.ai/embed/llm-performance-leaderboard">
+						<h2 class="slide-title">LLM performance leaderboard</h2>
+					</a>
+					<iframe style="width: 100%; height: 60vh"
+						data-src="https://artificialanalysis.ai/embed/llm-performance-leaderboard"></iframe>
+				</section>
+
+			</section>
 			<section>
 				<section>
 					<h2 class="slide-title">How to choose?</h2>
@@ -90,6 +121,8 @@
 						Focus on <b>accuracy</b> first then on <strong>cost</strong> and
 						<b>latency</b>
 					</p>
+					<a target="_blank" style="font-size: 1rem;"
+						href="https://platform.openai.com/docs/guides/model-selection/practical-example">More</a>
 					<aside class="notes">
 						In the POC phase we should focus on the accuracy, to see if we can
 						solve our problem with the best Model After that then we have a good
@@ -98,30 +131,14 @@
 					</aside>
 				</section>
 				<section>
-					<h2 class="slide-title">How to measure Accuracy?</h2>
+					<h2 class="slide-title">Create a benchmark</h2>
 					<ul>
-						<li>Setting a clear accuracy target</li>
-						<li>Developing an evaluation dataset</li>
+						<li>Choose a model (GTP-4o) </li>
+						<li>Choose a metric</li>
+						<li>Create benchmark</li>
+						<li>Evaluate benchmark for metric ( Human / LLM Model )
 					</ul>
-					<aside class="notes">
-						- Create a dataset that allows you to measure the model's performance against these goals.
-						-
-					</aside>
-
 				</section>
-			</section>
-			<section>
-				<section>
-					<h2 class="slide-title">Leaderboards</h2>
-				</section>
-				<section>
-					<a target="_blank" href="https://artificialanalysis.ai/embed/llm-performance-leaderboard">
-						<h2 class="slide-title">LLM performance leaderboard</h2>
-					</a>
-					<iframe style="width: 100%; height: 60vh"
-						data-src="https://artificialanalysis.ai/embed/llm-performance-leaderboard"></iframe>
-				</section>
-
 			</section>
 			<section>
 				<h2 class="slide-title">References</h2>
@@ -133,6 +150,18 @@
 							Comprehensive Comparison of Large Language Models (LLMs)
 						</a>
 					</li>
+					<li>
+						<a target="_blank" href="https://platform.openai.com/docs/guides/model-selection/practical-example">
+							OpenAI: Model selection
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://youtu.be/DeIUJRd48fI?si=lNIWPl0Ihsf7w_39">
+							Dive Deep into the World of LLM Benchmarks
+						</a>
+					</li>
+
+				</ul>
 			</section>
 		</div>
 
